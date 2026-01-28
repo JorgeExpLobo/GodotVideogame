@@ -37,6 +37,16 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("idle")
 
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("magic"):
+		var magicNode = load("res://scenes/magic_area.tscn")
+		var newMagic = magicNode.instantiate()
+		if $AnimatedSprite2D.flip_h == false:
+			newMagic.direction = -1
+		else:
+			newMagic.direction = 1
+		get_parent().add_child(newMagic)
+		newMagic.global_position = %MagicSpawnpoint.global_position
 
 func killPlayer():
 	position = %RespawnPoint.position

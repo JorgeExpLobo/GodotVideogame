@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm25rhr10ob7y"]
+
+[sub_resource type="Gradient" id="Gradient_dma5r"]
+offsets = PackedFloat32Array(0, 0.173333, 0.333333, 0.56, 0.78, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.909158, 0.265583, 0.773575, 1, 0.333333, 0.188235, 0.701961, 1, 0.580392, 0.121569, 0.121569, 1, 0.709804, 0.0627451, 0.823529, 1, 0.301961, 0, 0.772549, 0.431373)
+
+[node name="Magic" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 2000
+lifetime = 0.3
+speed_scale = 0.35
+randomness = 0.85
+emission_shape = 1
+emission_sphere_radius = 86.0
+spread = 20.0
+gravity = Vector2(-3000, 0)
+angular_velocity_min = -500.0
+linear_accel_max = 60.0
+scale_amount_max = 8.0
+color = Color(1, 0.423529, 1, 1)
+color_ramp = SubResource("Gradient_dma5r")
+hue_variation_max = 1.0

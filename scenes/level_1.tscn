@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://cu60dpdwlphtu"]
+[gd_scene load_steps=18 format=4 uid="uid://cu60dpdwlphtu"]
 
 [ext_resource type="Texture2D" uid="uid://bflxm5g4ysnm3" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - BackgroundDecoration.png" id="1_4s1wd"]
 [ext_resource type="Texture2D" uid="uid://do0wknyypufkp" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - Hanging Plants.png" id="2_m4ne1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bmex1j022iarh" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - TileSet.png" id="4_ouscb"]
 [ext_resource type="PackedScene" uid="uid://bknlgk5b5aiv2" path="res://scenes/player.tscn" id="5_s8ei2"]
 [ext_resource type="PackedScene" uid="uid://c5e20h4ir1bsq" path="res://scenes/coin.tscn" id="6_wjvic"]
+[ext_resource type="PackedScene" uid="uid://btkdjdr3ldvuj" path="res://scenes/enemy.tscn" id="7_hm37f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7vqpc"]
 texture = ExtResource("1_4s1wd")
@@ -371,6 +372,7 @@ texture_region_size = Vector2i(512, 512)
 5:7/0 = 0
 6:7/0 = 0
 7:7/0 = 0
+3:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wgphn"]
 tile_size = Vector2i(512, 512)
@@ -496,5 +498,14 @@ shape = SubResource("RectangleShape2D_opix0")
 [node name="RespawnPoint" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-1894, -492)
+
+[node name="Enemy" parent="." instance=ExtResource("7_hm37f")]
+position = Vector2(1886, -554)
+
+[node name="Enemy2" parent="." instance=ExtResource("7_hm37f")]
+position = Vector2(5173, -557)
+
+[node name="Enemy3" parent="." instance=ExtResource("7_hm37f")]
+position = Vector2(10284, -558)
 
 [connection signal="body_entered" from="DeathArea" to="Player" method="_on_death_area_body_entered"]
