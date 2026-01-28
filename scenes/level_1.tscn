@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=4 uid="uid://cu60dpdwlphtu"]
+[gd_scene load_steps=19 format=4 uid="uid://cu60dpdwlphtu"]
 
 [ext_resource type="Texture2D" uid="uid://bflxm5g4ysnm3" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - BackgroundDecoration.png" id="1_4s1wd"]
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_dm18t"]
 [ext_resource type="Texture2D" uid="uid://do0wknyypufkp" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - Hanging Plants.png" id="2_m4ne1"]
 [ext_resource type="Texture2D" uid="uid://6br4qchvkx47" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - Decorations&Hazards.png" id="3_rbilf"]
 [ext_resource type="Texture2D" uid="uid://bmex1j022iarh" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - TileSet.png" id="4_ouscb"]
@@ -385,6 +386,7 @@ size = Vector2(20, 34.5228)
 
 [node name="Level1" type="Node2D"]
 position = Vector2(1760, 164)
+script = ExtResource("1_dm18t")
 
 [node name="Tilemaps" type="Node2D" parent="."]
 

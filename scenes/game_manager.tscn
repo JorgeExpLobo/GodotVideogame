@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://da7nuxidwyhlc"]
+[gd_scene load_steps=4 format=3 uid="uid://da7nuxidwyhlc"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_jp85c"]
 [ext_resource type="PackedScene" uid="uid://b6mn5y5bndyun" path="res://scenes/gui.tscn" id="2_nlun0"]
+[ext_resource type="AudioStream" uid="uid://bxe8gt86ybr8i" path="res://assets/Sounds/Light Ambience 1.wav" id="3_it5hh"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_jp85c")
 
 [node name="GUI" parent="." instance=ExtResource("2_nlun0")]
+visible = false
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_it5hh")
+volume_db = -22.0
+autoplay = true
+
+[node name="SoundFX" type="AudioStreamPlayer" parent="."]
+volume_db = -25.0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bxe8gt86ybr8i"
+path="res://.godot/imported/Light Ambience 1.wav-d2e6b3e2b384ebfd3ac6e450ed91d8c6.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/Light Ambience 1.wav"
+dest_files=["res://.godot/imported/Light Ambience 1.wav-d2e6b3e2b384ebfd3ac6e450ed91d8c6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
